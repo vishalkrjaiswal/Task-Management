@@ -13,7 +13,7 @@ import taskRoutes from "./routes/taskRoutes.js"
 
 const app = express();
 
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8080;
 const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'http://localhost:5173';
 
 // Middleware
@@ -43,7 +43,7 @@ app.use((err, _req, res, _next) => {
 });
 
 app.listen(PORT, () => {
-  console.log("Server running on port: " + PORT);
+  console.log(`Server running on port ${PORT}`);
   connectDB();
 });
 
